@@ -1,26 +1,80 @@
 .DS_Store
 *.swp
 *.swo
-*.log
+*~
+*.tmp
+*.bak
+Thumbs.db
 
-# Build products
+# ── macOS build products ──
 /build/
+/build2/
 /dist/
 *.dSYM/
+*.dmg
+*.pkg
+*.zip
 
-# Xcode and SwiftPM local state
+# ── WinForms build products ──
+Sources/CodexUsageWidget.Windows/obj/
+Sources/CodexUsageWidget.Windows/bin/
+*.user
+*.suo
+*.cache
+
+# ── Qt / QML build products ──
+build-*/
+**/moc_*.cpp
+**/moc_*.h
+**/qrc_*.cpp
+**/*_qml.cpp
+**/*_qml.cpp.aotstats
+**/qmltyperegistrations.cpp
+**/qmlcache_loader.cpp
+**/.qt/
+**/.qtc_clangd/
+**/.qtcreator/
+*.qmlc
+*.jsc
+Makefile
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+CMakeUserPresets.json
+compile_commands.json
+.qmlls.ini
+
+# ── Qt Creator ──
+*.pro.user
+*.pro.user.*
+
+# ── Visual Studio / MSVC ──
+*.obj
+*.ilk
+*.pdb
+*.lib
+*.exp
+*.dll
+*.exe.manifest
+.vs/
+*.vcxproj.user
+*.vcxproj.filters
+
+# ── Runtime outputs ──
+*.log
+!CHANGELOG.md
+debug-log.txt
+codexu.log
+
+# ── Xcode / SwiftPM ──
 .build/
 .swiftpm/
 DerivedData/
 xcuserdata/
 *.xcuserstate
 
-# Local environment
+# ── Environment ──
 .env
 .env.*
 !.env.example
-
-# macOS packaging leftovers
-*.dmg
-*.pkg
-*.zip

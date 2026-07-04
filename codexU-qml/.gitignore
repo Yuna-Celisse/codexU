@@ -1,0 +1,25 @@
+# Qt/QML build outputs — never commit these
+build/
+build2/
+build-*/
+*.o
+*.obj
+moc_*
+qrc_*
+*_qml.cpp
+*_qml.cpp.aotstats
+qmltyperegistrations.cpp
+qmlcache_loader.cpp
+Makefile
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+.qt/
+.qtc_clangd/
+.qtcreator/
+*.qmlc
+*.jsc
+.qmlls.ini
+compile_commands.json
+*.dll
+*.exe
